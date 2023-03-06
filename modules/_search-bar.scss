@@ -1,0 +1,66 @@
+@use "../settings" as *;
+@use "../helper" as *;
+@use "../tools" as *;
+
+.search {
+    @extend %margin_horizontal_main;
+    margin-top: rem(30);
+    margin-bottom: rem(30);
+
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid setcolor('black', 'dark5');
+
+    @include screen-sm {
+        display: flex;
+    }
+
+    .search__input {
+        width: 75%;
+        padding-left: rem(60);
+
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+            height: rem(45);
+            width: rem(45);
+        }
+
+        input {
+            @extend .u-f--h2, .u-f--bold;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            color: setcolor('gray');
+
+
+            &::placeholder {
+                color: setcolor('gray');
+            }
+        }
+
+    }
+
+    .search__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding-right: rem(60);
+
+        img {
+            margin-right: 10px;
+            margin-bottom: rem(20);
+        }
+
+        p {
+            @extend .u-f--h4, .u-f--bold;
+            max-width: 60%;
+            color: setcolor('gray', 'dark');
+        }
+    }
+}

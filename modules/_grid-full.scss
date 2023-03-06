@@ -1,0 +1,18 @@
+@use "../settings" as *;
+@use "../helper" as *;
+@use "../tools" as *;
+
+.gridFull {
+    @extend %margin_horizontal_main;
+    position: relative;
+    overflow: hidden;
+
+    .item {
+        border-radius: rem(10);
+        overflow: hidden;
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
